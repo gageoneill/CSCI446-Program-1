@@ -61,6 +61,9 @@ public class AIProg1 {
 
     public static void aStar(Node[][] board){
         //f(n)= g(n)+ h(n)
+	//
+	//
+	
     }
     
     public static void depthFirst(Node[][] board){
@@ -149,6 +152,41 @@ public class AIProg1 {
     public static void breadthFirst(Node[][] board){
         //expand shallowest unexpanded node
         //First in, First out.
+	
+	//find starting point
+	List<Node> queue = new ArrayList<Node>();
+	//queue.add starting point
+	while(!queue.isEmpty()) {
+	    Node curr = queue.remove(0);
+	}
+
+
+    public static List<Node> getNeighbors(Node[][] board, Node node) {
+	List<Node> neighbors = new ArrayList<Node>();
+	//this method needs to find neighbors, ask chance how to go up right and left, looks like he was working on too
+	//ints for now
+	//left
+	if(isOnBoard(board, node.x - 1, node.y)) {
+	    neighbors.add(new Node(node.x - 1, node.y));
+	}
+	//right
+	if(isOnBoard(board, node.x + 1, node.y)) {
+            neighbors.add(new Node(node.x - 1, node.y));
+        }
+	//down
+	if(isOnBoard(board, node.x, node.y - 1)) {
+            neighbors.add(new Node(node.x - 1, node.y));
+        }
+	//up
+	if(isOnBoard(board, node.x, node.y + 1)) {
+            neighbors.add(new Node(node.x - 1, node.y));
+        }
+	return neighbors;
+    }
+
+    public static boolean isOnBoard(Node[][] board, int x, int y) {
+	//method to make sure node is on board somehow
+	return true;
     }
             
      public static void greedyBest(Node[][] board){
@@ -311,5 +349,6 @@ public class AIProg1 {
         output = Math.abs(sV - eV) + Math.abs(sH - eH);
         
         return output;
-    }
+    } 
+
 }
