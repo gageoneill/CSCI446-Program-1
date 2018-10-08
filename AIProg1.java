@@ -156,11 +156,21 @@ public class AIProg1 {
 	//find starting point
 	List<Node> queue = new ArrayList<Node>();
 	//queue.add starting point
+	/*
 	while(!queue.isEmpty()) {
 	    Node curr = queue.remove(0);
+	    if(goal check)
+	    break;
+
+	    board[curr.x, curr.y] = visited;
+	    List<Node> neighbors = getNeighbors(board, curr);
+	    queue.addALL(neighbors);
 	}
 
-
+	return ...
+	
+	*/
+    }
     public static List<Node> getNeighbors(Node[][] board, Node node) {
 	List<Node> neighbors = new ArrayList<Node>();
 	//this method needs to find neighbors, ask chance how to go up right and left, looks like he was working on too
@@ -185,7 +195,7 @@ public class AIProg1 {
     }
 
     public static boolean isOnBoard(Node[][] board, int x, int y) {
-	//method to make sure node is on board somehow
+	// TODO method to make sure node is on board
 	return true;
     }
             
